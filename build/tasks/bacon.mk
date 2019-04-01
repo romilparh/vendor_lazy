@@ -14,12 +14,12 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# Lazy OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+LAZY_TARGET_PACKAGE := $(PRODUCT_OUT)/lazy-$(LAZY_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LAZY_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(LAZY_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LAZY_TARGET_PACKAGE).md5sum
+	@echo "Package Complete: $(LAZY_TARGET_PACKAGE)" >&2

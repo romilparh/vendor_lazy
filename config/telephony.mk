@@ -1,6 +1,6 @@
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
+    vendor/lazy/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
 
 # World APN list
 PRODUCT_PACKAGES += \
@@ -14,7 +14,7 @@ PRODUCT_PACKAGES += \
 
 # Default ringtone
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.config.ringtone=Orion.ogg
+    ro.config.ringtone=Rockin.ogg
 
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
